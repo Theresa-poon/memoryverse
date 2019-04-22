@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar class="verse-background-color">
+      <ion-buttons slot="start">
+          <ion-back-button text=""></ion-back-button>
+      </ion-buttons>
+      &nbsp;對 戰 區
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-content class=versedisplay>
+        
+        <ion-img src="https://ucarecdn.com/{{ information.payload.doc.data().image }}/-/scale_crop/400x200/center/"></ion-img>
+        
+        <ion-button expand="full" fill="clear" size="small" color="light" strong>
+          <div class=versetext>{{ information.payload.doc.data().verse }}</div>
+        </ion-button>
+        
+        <p class=versetext>「{{ information.payload.doc.data().sentence1.substr(0,1) }} .................</p>
+        <p class=versetext *ngIf="information.payload.doc.data().sentence3 == ''"> &nbsp; &nbsp;{{ information.payload.doc.data().sentence2.substr(0,1) }} .................」</p>
+        <p class=versetext *ngIf="information.payload.doc.data().sentence3 != ''"> &nbsp;{{ information.payload.doc.data().sentence2.substr(0,1) }} .................</p>
+        <p class=versetext *ngIf="information.payload.doc.data().sentence3 != ''"> &nbsp; &nbsp;{{ information.payload.doc.data().sentence3.substr(0,1) }} .................」</p>
+
+      </ion-card-content>
+</ion-card>
+
+<p></p>
+
+<ion-card>
+  <ion-card-content class=textinput>
+      <ion-textarea rows=3 placeholder="輸入經文(省略章節及標點符號)" [(ngModel)]="trialInput"></ion-textarea>
+      <ion-button shape="round" color="danger" size="small" (click)="checkInput()" slot="end">
+        <div>檢視輸入</div>
+      </ion-button>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>

@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-toolbar class="new-background-child">
+      <ion-icon name="paw" slot="start"></ion-icon>
+      <ion-button slot="end" fill="clear">
+        <ion-menu-button class="sidemenuchild"></ion-menu-button>
+      </ion-button>
+      &nbsp;&nbsp;&nbsp;兒 童 篇
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    
+        <ion-card *ngFor="let item of itemschild; index as i" (click)="GoToVersePractice(item, i, 'child')">
+          
+          <ion-card-content class=doneoddchild *ngIf="this.localstorageService.doneVerseschild[i] != '0' && i % 2 === 0">
+              
+            <ion-img src="https://ucarecdn.com/{{ item.payload.doc.data().image }}/-/scale_crop/400x200/center/"></ion-img>
+            
+            <ion-button expand="full" fill="clear" size="small" color="light" strong>
+              <div class=doneiconchild slot="end">
+                <ion-icon name="star" slot="end"></ion-icon>
+                <ion-icon name="star-outline" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '1'"></ion-icon>
+                <ion-icon name="star-outline" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '1'"></ion-icon>
+                <ion-icon name="star" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '2'"></ion-icon>
+                <ion-icon name="star-outline" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '2'"></ion-icon>
+                <ion-icon name="star" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '3'"></ion-icon>
+                <ion-icon name="star" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '3'"></ion-icon>
+              </div>
+              <div class=donetextchild>{{ item.payload.doc.data().verse }} &nbsp;</div>
+            </ion-button>
+            
+            <p class=donetextchild>「{{ item.payload.doc.data().sentence1 }}</p>
+            <p class=donetextchild *ngIf="item.payload.doc.data().sentence3 == ''">{{ item.payload.doc.data().sentence2 }}」</p>
+            <p class=donetextchild *ngIf="item.payload.doc.data().sentence3 != ''">{{ item.payload.doc.data().sentence2 }}</p>
+            <p class=donetextchild *ngIf="item.payload.doc.data().sentence3 != ''">{{ item.payload.doc.data().sentence3 }}」</p>
+           
+          </ion-card-content>
+    
+          <ion-card-content class=doneevenchild *ngIf="this.localstorageService.doneVerseschild[i] != '0' && i % 2 === 1">
+              
+              <ion-img src="https://ucarecdn.com/{{ item.payload.doc.data().image }}/-/scale_crop/400x200/center/"></ion-img>
+              
+              <ion-button expand="full" fill="clear" size="small" color="light" strong>
+                <div class=doneiconchild slot="end">
+                  <ion-icon name="star" slot="end"></ion-icon>
+                  <ion-icon name="star-outline" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '1'"></ion-icon>
+                  <ion-icon name="star-outline" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '1'"></ion-icon>
+                  <ion-icon name="star" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '2'"></ion-icon>
+                  <ion-icon name="star-outline" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '2'"></ion-icon>
+                  <ion-icon name="star" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '3'"></ion-icon>
+                  <ion-icon name="star" slot="end" *ngIf="this.localstorageService.doneVerseschild[i] == '3'"></ion-icon>
+                </div>
+                <div class=donetextchild>{{ item.payload.doc.data().verse }} &nbsp;</div>
+              </ion-button>
+              
+              <p class=donetextchild>「{{ item.payload.doc.data().sentence1 }}</p>
+              <p class=donetextchild *ngIf="item.payload.doc.data().sentence3 == ''">{{ item.payload.doc.data().sentence2 }}」</p>
+              <p class=donetextchild *ngIf="item.payload.doc.data().sentence3 != ''">{{ item.payload.doc.data().sentence2 }}</p>
+              <p class=donetextchild *ngIf="item.payload.doc.data().sentence3 != ''">{{ item.payload.doc.data().sentence3 }}」</p>
+    
+            
+            </ion-card-content>
+    
+          <ion-card-content  class=notyetchild *ngIf="this.localstorageService.doneVerseschild[i] == '0'">
+            
+            <ion-button expand="full" fill="clear" size="small" color="light" strong>
+              <div class=notyeticonchild slot="end">
+                <ion-icon name="star-outline" slot="end"></ion-icon>
+                <ion-icon name="star-outline" slot="end"></ion-icon>
+                <ion-icon name="star-outline" slot="end"></ion-icon>
+              </div>
+              <div class=notyettextchild>{{ item.payload.doc.data().verse }} &nbsp;</div>
+            </ion-button>
+    
+            <p class=notyettextchild>「{{ item.payload.doc.data().sentence1 }}</p>
+            <p class=notyettextchild *ngIf="item.payload.doc.data().sentence3 == ''">{{ item.payload.doc.data().sentence2 }}」</p>
+            <p class=notyettextchild *ngIf="item.payload.doc.data().sentence3 != ''">{{ item.payload.doc.data().sentence2 }}</p>
+            <p class=notyettextchild *ngIf="item.payload.doc.data().sentence3 != ''">{{ item.payload.doc.data().sentence3 }}」</p>
+
+          </ion-card-content>
+        
+        </ion-card>
+    
+    </ion-content>
+
+
+
+    
+    

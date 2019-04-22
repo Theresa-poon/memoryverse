@@ -1,0 +1,132 @@
+ion-content {
+    --background: #99ffcc;
+    //--background: none;
+    //background-image: linear-gradient(to bottom right, #191970, #000066);
+  }
+  
+  
+  .new-background-teen{
+      //--background: #ccffff;
+      //--background: #FFE4C4; 
+      --background: #FDF5E6;
+      --color: #000014;
+      //--color: #800000;
+      font-family: DFKai-sb;
+      font-size: 30px;
+      padding: 15px 0px 0px 8px;
+      //padding: 15px 45px 0px 8px;
+      text-align: center;
+      text-shadow: 1px 1px 1px #F8F8FF;
+    }
+
+    .sidemenubutton {
+        //--background: #FFE4C4; 
+        //--color: #006400;
+        --color: #000014;
+        //--color: #800000;
+        --max-width: 10px;
+      }
+    
+      //.mainchild {
+      //  background: #FFA07A;
+      //}
+      
+      .notyetteenodd:hover { 
+        border: 2px solid #ccffff;
+      }
+
+      .notyetteeneven:hover { 
+        border: 2px solid #ccffff;
+      }
+      
+      .notyetteenodd {
+        background: #ffffb8;
+        //background-image: linear-gradient(to bottom right, #7fff00, #ccff99);
+        //background-image: linear-gradient(to bottom right, #90ee90, #ccff99);
+        padding: 10px 3px;
+        text-align: center;
+        //border: 1px solid #FFDAB9;
+        --box-shadow: 0;
+      }
+
+      .notyetteeneven {
+        background: #f7fff7;
+        //background-image: linear-gradient(to bottom right, #ccffcc, #f7fff7);
+        //background-image: linear-gradient(to bottom right, #FFF0F5, #FAFAD2);
+        padding: 10px 3px;
+        text-align: center;
+        //border: 1px solid #FFDAB9;
+        --box-shadow: 0;
+      }
+      
+      .notyeticonteen {
+        font-size: 18px;
+        //color: #008000;
+        color: #A9A9A9;
+      }
+      
+      .notyettextteen {
+        font-family: DFKai-sb;
+        //font-family: Hiragino Sans GB;
+        font-size: 14px;
+        color: #000014;
+        //color: #1f1f7a;
+        //position: absolute;
+        //top: 36%;
+        //text-shadow: 1px 1px 1px #0000CD;
+      }
+      
+      .doneoddteen:hover { 
+        border: 2px solid #FFD700;
+      }
+      
+      .doneeventeen:hover { 
+        border: 2px solid #FFD700;
+      }
+      
+      .doneoddteen {
+          //font-family: DFKai-sb;
+          //color: white;
+          background-color: #FFA500;
+          padding: 10px 5px;
+          //text-shadow: 0px 0px 4px #800000;
+          text-align: center;
+        }
+      
+      .doneeventeen {
+          //font-family: DFKai-sb;
+          //color: white;
+          background-color: #FF8C00;
+          padding: 10px 3px;
+          //text-shadow: 0px 0px 4px #800000;
+          text-align: center;
+       }
+      
+       .doneiconteen {
+        font-size: 18px;
+        //color: #008000;
+        color: #ADFF2F;
+      }
+      
+      .doneiconteentwo {
+        font-size: 18px;
+        color: #FF1493;
+        //color: #ADFF2F;
+      }
+
+      .doneiconteenthree {
+        font-size: 18px;
+        color: #00FFFF;
+        //color: #ADFF2F;
+      }
+
+      .donetextteen {
+        font-family: DFKai-sb;
+        //font-family: Hiragino Sans GB;
+        font-size: 14px;
+        color: white;
+        //color: #228B22;
+        //position: absolute;
+        //top: 36%;
+        text-shadow: 1px 1px 0.5px rgb(71, 68, 41);
+      }

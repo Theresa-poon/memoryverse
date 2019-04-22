@@ -2,8 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: '', redirectTo: 'menu', pathMatch: 'full' },
+  //{ path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
+  { path: 'verse', loadChildren: './verse/verse.module#VersePageModule' },
+  { path: 'menu-child-a', loadChildren: './menu-child-a/menu-child-a.module#MenuChildAPageModule' },
+  { path: 'menu-teen', loadChildren: './menu-teen/menu-teen.module#MenuTeenPageModule' },
+  { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
+  { path: 'reset', loadChildren: './reset/reset.module#ResetPageModule' },
+  { path: 'battle', loadChildren: './battle/battle.module#BattlePageModule' },
+  { path: 'versebattle', loadChildren: './versebattle/versebattle.module#VersebattlePageModule' },
 ];
 
 @NgModule({

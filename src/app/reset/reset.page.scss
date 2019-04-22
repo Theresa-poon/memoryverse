@@ -1,0 +1,45 @@
+ion-content {
+    --background: white;
+    //background-image: linear-gradient(#FFA07A, #E9967A, #FFA07A);
+    
+  }
+  
+  .new-background-color{
+    --background: #FFE4C4; 
+    //--color: #006400;
+    --color: #800000;
+    font-family: DFKai-sb;
+    font-size: 30px;
+    padding: 15px 0px 0px 8px;
+    //padding: 15px 45px 0px 8px;
+    text-align: center;
+    text-shadow: 1px 1px 3px #F4A460;
+  }
+
+  .sidemenubutton {
+    //--background: #FFE4C4; 
+    //--color: #006400;
+    --color: #800000;
+    --max-width: 10px;
+  }
+  
+  .heading {
+    background-image: linear-gradient(#FFA07A, #E9967A, #FFA07A);
+    color: #5e0e0e;
+    font-weight: bold;
+    //text-shadow: 1px 1px 3px #F4A460;
+  }
+
+  .highlight {
+    padding: 50px 0px 0px 22px;
+    color: #FF0000;
+    font-family: DFKai-sb;
+    font-size: 14px;
+  }
+
+  .highlight2 {
+    padding: 50px 0px 0px 22px;
+    color: #FF0000;
+    font-family: DFKai-sb;
+    font-size: 13px;
+  }

@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-icon name="grid" slot="start"></ion-icon>
+    <ion-button slot="end" fill="clear">
+      <ion-menu-button class="sidemenubutton"></ion-menu-button>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;對 戰 區
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card *ngIf="this.localstorageService.roundCount % 2 === 1 && this.localstorageService.whoWins === 0" class=instructions>
+    <p class=notblinking>規則: 首先完成三句金句、並連成一直線者為獲勝</p>
+    <a class=personone>對戰者1: </a><span class=blinking>請選擇金句</span>
+  </ion-card>
+  
+  <ion-card *ngIf="this.localstorageService.roundCount % 2 === 0 && this.localstorageService.whoWins === 0" class=instructions>
+    <p class=notblinking>規則: 首先完成三句金句、並連成一直線者為獲勝</p>
+    <a class=persontwo>對戰者2: </a> <span class=blinking>請選擇金句</span>
+  </ion-card>
+
+  <ion-card *ngIf="this.localstorageService.roundCount % 2 === 0 && this.localstorageService.whoWins === 1" class=instructions>
+    <p class=notblinking>規則: 首先完成三句金句、並連成一直線者為獲勝</p>
+    <a class=personone>對戰者1: </a> <span class=blinkingY>獲 勝 !</span>
+  </ion-card>
+
+  <ion-card *ngIf="this.localstorageService.roundCount % 2 === 1 && this.localstorageService.whoWins === 2" class=instructions>
+    <p class=notblinking>規則: 首先完成三句金句、並連成一直線者為獲勝</p> 
+    <a class=persontwo>對戰者2: </a> <span class=blinkingY>獲 勝 !</span>
+  </ion-card>
+
+  <ion-card *ngIf="this.localstorageService.whoWins === 3" class=instructions>
+    <p class=notblinking>規則: 首先完成三句金句、並連成一直線者為獲勝</p> 
+    <a class=draw>兩位對戰者: 雙 方 平 手 !</a> 
+  </ion-card>
+  
+<div id=images>
+
+  <div class=image *ngFor="let item of itemsbattle; index as i">
+  <div *ngIf="i < 9">
+
+  <ion-card *ngIf="this.localstorageService.battleBoard[i] == '0' && this.localstorageService.whoWins === 0" (click)="GoToVerseBattle(item, i)"> 
+    <ion-card-content>  
+      <ion-img src="https://ucarecdn.com/{{ item.payload.doc.data().image }}/-/scale_crop/100x100/center/"></ion-img>   
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="this.localstorageService.battleBoard[i] == '0' && this.localstorageService.whoWins != 0">  
+      <ion-card-content>   
+        <ion-img src="https://ucarecdn.com/{{ item.payload.doc.data().image }}/-/scale_crop/100x100/center/"></ion-img>   
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card class=doneone *ngIf="this.localstorageService.battleBoard[i] == '1'">  
+    <ion-card-content>   
+      <ion-img src="https://ucarecdn.com/{{ item.payload.doc.data().image }}/-/scale_crop/100x100/center/"></ion-img>   
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class=donetwo *ngIf="this.localstorageService.battleBoard[i] == '2'"> 
+    <ion-card-content>   
+      <ion-img src="https://ucarecdn.com/{{ item.payload.doc.data().image }}/-/scale_crop/100x100/center/"></ion-img>   
+    </ion-card-content>
+  </ion-card>
+
+  </div>
+  </div>
+
+</div>
+
+<div padding>
+<ion-button shape="round" size="small" color="danger" strong *ngIf="this.localstorageService.roundCount > 1"  (click)="refresh()">
+  <div slot="end">
+    <ion-icon name="refresh" slot="end"></ion-icon>
+  </div>
+  <div>重新開始 &nbsp;</div>
+</ion-button>
+</div>
+
+</ion-content>

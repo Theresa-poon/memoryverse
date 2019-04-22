@@ -1,0 +1,104 @@
+ion-content {
+  --background: none;
+  background-image: linear-gradient(#FFA07A, #E9967A, #FFA07A);
+}
+
+.new-background-color{
+  --background: #FFE4C4; 
+  //--color: #006400;
+  --color: #800000;
+  font-family: DFKai-sb;
+  font-size: 30px;
+  padding: 15px 0px 0px 8px;
+  //padding: 15px 45px 0px 8px;
+  text-align: center;
+  text-shadow: 1px 1px 3px #F4A460;
+}
+
+.sidemenubutton {
+  //--background: #FFE4C4; 
+  //--color: #006400;
+  --color: #800000;
+  --max-width: 10px;
+}
+
+//.main {
+  //height: 100vh;
+  //background-image: linear-gradient(#FFA07A, #E9967A, #FFA07A);
+  //background: #FFA07A;
+  //padding-top: 0 !important; 
+//}
+
+.notyet:hover { 
+  //background-color: #F4A460;
+  //color: white;
+  //text-shadow: 1px 1px 3px #696969;
+  //border: 2px solid #8FBC8F;
+  border: 2px solid #DB7093;
+}
+
+.notyet {
+  background-image: linear-gradient(to bottom right, #FFF0F5, #FAFAD2);
+  padding: 10px 3px;
+  text-align: center;
+  //border: 1px solid #8FBC8F;
+}
+
+.notyeticon {
+  font-size: 18px;
+  //color: #008000;
+  color: #A9A9A9;
+}
+
+.notyettext {
+  font-family: DFKai-sb;
+  //font-family: Microsoft JhengHei;
+  font-size: 15px;
+  color: #A52A2A;
+  //color: #228B22;
+  //position: absolute;
+  //top: 36%;
+  //text-shadow: 1px 1px 1px #0000CD;
+}
+
+.doneodd:hover { 
+  border: 2px solid #FFD700;
+}
+
+.doneeven:hover { 
+  border: 2px solid #FFD700;
+}
+
+.doneodd {
+    //font-family: DFKai-sb;
+    //color: white;
+    background-color: #FFA500;
+    padding: 10px 5px;
+    //text-shadow: 0px 0px 4px #800000;
+    text-align: center;
+  }
+
+.doneeven {
+    //font-family: DFKai-sb;
+    //color: white;
+    background-color: #FF8C00;
+    padding: 10px 3px;
+    //text-shadow: 0px 0px 4px #800000;
+    text-align: center;
+ }
+
+ .doneicon {
+  font-size: 18px;
+  //color: #008000;
+  color: #ADFF2F;
+}
+
+.donetext {
+  font-family: DFKai-sb;
+  font-size: 15px;
+  color: white;
+  //color: #228B22;
+  //position: absolute;
+  //top: 36%;
+  text-shadow: 1px 1px 0.5px rgb(71, 68, 41);
+}

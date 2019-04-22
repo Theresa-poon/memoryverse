@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-icon name="settings" slot="start"></ion-icon>
+    <ion-button slot="end" fill="clear">
+      <ion-menu-button class="sidemenubutton"></ion-menu-button>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;&nbsp;設  置
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+   <ion-list>
+
+    <br>
+    <ion-item class=heading>選擇重置頁面: </ion-item>
+
+    <ion-item>
+      <ion-label>初 信 篇</ion-label>
+      <ion-checkbox [(ngModel)]="changeMenu"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>兒 童 篇</ion-label>
+        <ion-checkbox [(ngModel)]="changeChild"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>少 年 篇</ion-label>
+        <ion-checkbox [(ngModel)]="changeTeen"></ion-checkbox>
+    </ion-item>
+
+    <div>
+      <br><a class=highlight>注意:重置後, 頁面<strong>所有</strong>經文均會顯示為</a> 
+      <br><a class=highlight2>「尚未成功背誦」</a>   
+    </div> 
+
+  </ion-list>
+
+  <div padding>
+      <ion-button shape="round" size="small" color="primary" strong *ngIf="changeMenu || changeChild || changeTeen"  (click)="reset()">
+        <div slot="end">
+          <ion-icon name="refresh" slot="end"></ion-icon>
+        </div>
+        <div>確定重置 &nbsp;</div>
+      </ion-button>
+  </div>
+
+</ion-content>
+

@@ -1,3 +1,27 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-split-pane>
+    <ion-menu class="width">
+
+      <ion-header>
+        <ion-toolbar color="light">
+          <ion-title class=menutitle>目 錄</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content padding background-color="light">
+        <ion-list>
+          <ion-menu-toggle *ngFor="let p of appPages">
+            <ion-item [routerLink]="p.url">
+              <ion-icon slot="start" [name]="p.icon" class=menutitle></ion-icon>
+              <ion-label class=menutitle>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+
 </ion-app>

@@ -1,0 +1,105 @@
+ion-content {
+  --background: #E0FFFF;
+  //background-image: linear-gradient(#FFA07A, #E9967A, #FFA07A);
+}
+
+
+.new-background-child{
+    --background: #FFFFE0;
+    //--background: #FFE4C4; 
+    --color: #800000;
+    font-family: DFKai-sb;
+    font-size: 30px;
+    padding: 15px 0px 0px 8px;
+    //padding: 15px 45px 0px 8px;
+    text-align: center;
+    text-shadow: 1px 1px 3px #F4A460;
+  }
+  
+  .sidemenuchild {
+    //--background: #FFE4C4; 
+    //--color: #006400;
+    --color: #800000;
+    --max-width: 10px;
+  }
+
+  //.mainchild {
+  //  background: #FFA07A;
+  //}
+  
+  .notyetchild:hover { 
+    //background-color: #F4A460;
+    //color: white;
+    //text-shadow: 1px 1px 3px #696969;
+    //border: 2px solid #8FBC8F;
+    border: 2px solid #DB7093;
+  }
+  
+  .notyetchild {
+    //background-image: linear-gradient(to bottom right, #E0FFFF, #F5F5DC);
+    background-image: linear-gradient(to bottom right, #FFF0F5, #FAFAD2);
+    padding: 10px 3px;
+    text-align: center;
+    //border: 1px solid #FFDAB9;
+    --box-shadow: 0;
+  }
+  
+  .notyeticonchild {
+    font-size: 18px;
+    //color: #008000;
+    color: #A9A9A9;
+  }
+  
+  .notyettextchild {
+    //font-family: DFKai-sb;
+    font-family: Microsoft JhengHei;
+    font-size: 15px;
+    color: #A52A2A;
+    //color: #228B22;
+    //position: absolute;
+    //top: 36%;
+    //text-shadow: 1px 1px 1px #0000CD;
+  }
+  
+  .doneoddchild:hover { 
+    border: 2px solid #FFD700;
+  }
+  
+  .doneevenchild:hover { 
+    border: 2px solid #FFD700;
+  }
+  
+  .doneoddchild {
+      //font-family: DFKai-sb;
+      //color: white;
+      background-color: #FFA500;
+      padding: 10px 5px;
+      //text-shadow: 0px 0px 4px #800000;
+      text-align: center;
+    }
+  
+  .doneevenchild {
+      //font-family: DFKai-sb;
+      //color: white;
+      background-color: #FF8C00;
+      padding: 10px 3px;
+      //text-shadow: 0px 0px 4px #800000;
+      text-align: center;
+   }
+  
+   .doneiconchild {
+    font-size: 18px;
+    //color: #008000;
+    color: #ADFF2F;
+  }
+  
+  .donetextchild {
+    //font-family: DFKai-sb;
+    font-family: Microsoft JhengHei;
+    font-size: 15px;
+    color: white;
+    //color: #228B22;
+    //position: absolute;
+    //top: 36%;
+    text-shadow: 1px 1px 0.5px rgb(71, 68, 41);
+  }
