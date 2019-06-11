@@ -1,5 +1,5 @@
-# 頌經樂 memoryverse 
-## 「頌經樂」是一個幫助主日學生背誦金句的軟件, 利用豐富的圖文和有趣的遊戲, 強化兒童和青少年對經文的印象.  This is an app to help encourage Chinese Sunday school students memorize bible verses using fun games and attractive visuals.
+# 頌經樂 (memoryverse) 
+## 「頌經樂」是一個幫助主日學生背誦金句的軟件, 利用豐富的圖文和有趣的遊戲, 強化兒童和青少年對經文的印象. (This is an app to help encourage Chinese Sunday school students memorize bible verses using fun games and attractive visuals.)
 ### 軟件功能:
 * 根據三個程度, 提供相應內容與難度:「初信」, 「兒童」,「青少年」
 * 可使用語音輸入法, 快速核對背誦正確與否
