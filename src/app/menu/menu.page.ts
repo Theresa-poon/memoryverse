@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FirebaseService } from '../firebase.service';
 import { LocalstorageService } from '../localstorage.service';
 import { Router } from '@angular/router';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-menu',
@@ -19,7 +20,8 @@ export class MenuPage implements OnInit {
   constructor(private afs: AngularFirestore,
     public firebaseService: FirebaseService, 
     public localstorageService: LocalstorageService, 
-    private router: Router) 
+    private router: Router,
+    private screenOrientation: ScreenOrientation) 
     {
     //const verse = afs.doc('verses/one1')
     //this.bibleVerse = verse.valueChanges()
@@ -31,6 +33,12 @@ export class MenuPage implements OnInit {
   //  return snapshot
     //return snapshot.forEach(doc => doc.docChanges())
   //}
+
+  ionViewWillEnter() {
+    // turn on the side menu when entering page
+    //this.menu.enable(true);
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+  }
 
   ngOnInit() {
     this.getData();

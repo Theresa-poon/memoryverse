@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="marathon-background-color">
+    <ion-buttons slot="start">
+        <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    會 員 區
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card class=teamInfo *ngIf="itemsUserData as Data" >
+      <ion-item class=teamMenu>
+          <ion-label class=columnL>{{ Data.name }}</ion-label>
+          <ion-label class=columnC>級別{{ Data.level }}</ion-label>
+          <ion-label class=columnR>{{ Data.score }}分</ion-label>
+      </ion-item>
+  </ion-card>
+
+  <ion-card class=verseInfo>
+
+    <ion-item class=verseMenu>
+      <ion-label class=searchLine>選 擇 經 文 :</ion-label>
+      <ion-select class=option [(ngModel)]="vsData" cancelText="取消" okText="確定" (ionChange)="checkVerse()">
+          <ion-select-option *ngFor="let item of itemsVerseData; index as i" value="{{ [i+1,item.payload.doc.data().verse,item.payload.doc.data().sentence1,item.payload.doc.data().sentence2,item.payload.doc.data().sentence3,item.payload.doc.data().sentence4,item.payload.doc.data().sentence5] }}">級別: {{ i+1 }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <p class="floatOne" *ngIf="this.vsData == ''">加 油 ！ 加 油 ！</p>
+    <p class="floatOne" *ngIf="this.vsData != ''">{{ vsDataArray[1] }}</p>
+
+    <ion-img src="assets/images/jump.jpg" (click)="showHint()"></ion-img>
+
+  </ion-card>
+
+  <ion-card class=memberInfo>
+
+    <ion-item class=memberMenu>
+      <ion-label class=searchLine>選 擇 隊 員 :</ion-label>
+      <ion-select class=option [(ngModel)]="mmData" cancelText="取消" okText="確定" (ionChange)="checkMember()">
+        <ion-select-option *ngFor="let itemM of memberName; index as i" value="{{ [memberLevel[i],i,itemM] }}">{{ itemM }}: {{ memberLevel[i] }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class=textinput>
+      <ion-textarea rows=5 placeholder="輸入經文 (省略章節及標點符號) - 可使用語音輸入" [(ngModel)]="trialInput"></ion-textarea>
+      <ion-button shape="round" color="danger" size="small" (click)="checkInput()" slot="end">
+        <div>檢視輸入</div>
+      </ion-button>
+    </div>
+
+  </ion-card>
+    
+</ion-content>

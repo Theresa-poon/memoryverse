@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-icon name="rocket" slot="start"></ion-icon>
+    <ion-button slot="end" fill="clear">
+      <ion-menu-button class="sidemenubutton"></ion-menu-button>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;會 員 區
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class=welcome *ngIf="this.localstorageService.switch === 0">歡迎進入會員區 !</div>
+  <div class=welcome *ngIf="this.localstorageService.switch === 1">你好, {{ this.localstorageService.lastUsername }} !</div>
+       
+  <ion-card class=rankMain>
+
+    <ion-item class=rankMenu>
+      <ion-label class=searchtype>排 行 榜 :</ion-label>
+      <ion-select class=option [(ngModel)]="type" cancelText="取消" okText="確定" (ionChange)="searchChanged()">
+          <ion-select-option value="level">級別排行榜</ion-select-option>
+          <ion-select-option value="points">積分排行榜</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <div class=maxH *ngIf="this.type == 'level'">
+    <ion-list *ngFor="let item of itemsUserL; index as i">
+    
+      <ion-item class=rankTable>
+      
+        <ion-label class=columnL>{{ i+1 }}&nbsp;{{ item.payload.doc.data().name }}</ion-label>
+        <ion-label class=columnC>&nbsp;級別:&nbsp;{{ item.payload.doc.data().level }}</ion-label>
+        <ion-label class=columnR>{{ item.payload.doc.data().score }}分</ion-label>
+      
+      </ion-item>
+
+    </ion-list>
+    </div>
+
+    <div class=maxH *ngIf="this.type == 'points'">
+      <ion-list *ngFor="let item of itemsUserR; index as i">
+      
+        <ion-item class=rankTable>
+        
+          <ion-label class=columnL>{{ i+1 }}&nbsp;{{ item.payload.doc.data().name }}</ion-label>
+          <ion-label class=columnC>&nbsp;級別:&nbsp;{{ item.payload.doc.data().level }}</ion-label>
+          <ion-label class=columnR>{{ item.payload.doc.data().score }}分</ion-label>
+        
+        </ion-item>
+  
+      </ion-list>
+    </div>
+
+  </ion-card>  
+    
+  <ion-list class=zeroMargin>
+    <ion-item lines="none">
+      <div class=columnBt>
+        <ion-button shape="round" color="primary" size="small" (click)="login()" *ngIf="this.localstorageService.switch === 0">登 入</ion-button>
+        <ion-button shape="round" color="primary" size="small" (click)="logout()" *ngIf="this.localstorageService.switch === 1">登 出</ion-button>
+      </div>
+      <div class=columnHd>
+          <ion-button shape="round" color="danger" size="small" (click)="startGame()">開始遊戲</ion-button>
+      </div>
+      <div class=columnBt>
+        <ion-button shape="round" color="light" size="small" (click)="rules()">規 則</ion-button>
+      </div>
+    </ion-item> 
+  </ion-list>  
+
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar class="login-background-color">
+    <ion-buttons slot="start">
+        <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    會 員 區
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>選 擇 用 戶 :</ion-label>
+    <ion-select [(ngModel)]="dbData" cancelText="取消" okText="確定">
+        <ion-select-option *ngFor="let item of userList" value="{{ [item.payload.doc.id,item.payload.doc.data().name,item.payload.doc.data().password] }}">{{ item.payload.doc.data().name }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+
+    <ion-item>
+        <ion-label position="floating">密 碼</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+  </ion-list>
+
+  <ion-button fill="solid" expand="block" color="primary" (click)="loginCheck()">登 入</ion-button>
+
+  <ion-button fill="clear" size="small" expand="block" color="primary" (click)="loginTrial()">以訪客身份試玩</ion-button>
+
+</ion-content>

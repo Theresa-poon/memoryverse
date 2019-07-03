@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 //import firebaseConfig from './firebase'; // import Firebase
 import { AngularFireModule } from '@angular/fire'; // import Firebase
 import { AngularFirestoreModule } from '@angular/fire/firestore'; //import firestore
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 
 const config = {
   apiKey: "AIzaSyBwZrJj5Eqp9TtFachASp90k1rq2wVqh0A",
@@ -39,7 +41,8 @@ const config = {
     SplashScreen,
     Network,  // ???? Do I need this? 3 Apr trial
     //NetworkService, // ???? Do I need this? 3 Apr trial
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    ScreenOrientation
   ],
   bootstrap: [AppComponent]
 })

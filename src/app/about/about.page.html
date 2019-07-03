@@ -14,10 +14,75 @@
     <ion-card-content class=about>
         <h1>「頌經樂」</h1>
         <span>
-          是一個幫助信徒背頌經文的軟件, 利用豐富的圖文和有趣的遊戲, 強化兒童和青少年對經文的印象.
+          是一個幫助信徒背誦經文的軟件, 利用豐富的圖文和有趣的遊戲, 強化兒童和青少年對經文的印象.
         </span>
         <br>
         <span class=smaller>備註: 本軟件採用「和合本聖經」經文, 若使用語音輸入法, 則以粵語為準.</span>
     </ion-card-content>
   </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>圖 片 鳴 謝 (初信篇):</ion-label>
+    </ion-item>
+  
+    <ion-list>
+    
+      <ion-item class=credit *ngFor="let item of itemsCredit; index as i">
+      
+        <ion-label>{{ i+1 }}&nbsp;{{ item.payload.doc.data().credit }}</ion-label>
+       
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>圖 片 鳴 謝 (兒童篇):</ion-label>
+    </ion-item>
+  
+    <ion-list>
+    
+      <ion-item class=credit *ngFor="let item of itemsCreditChild; index as i">
+      
+        <ion-label>{{ i+1 }}&nbsp;{{ item.payload.doc.data().credit }}</ion-label>
+       
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>圖 片 鳴 謝 (少年篇):</ion-label>
+    </ion-item>
+  
+    <ion-list>
+    
+      <ion-item class=credit *ngFor="let item of itemsCreditTeen; index as i">
+      
+        <ion-label>{{ i+1 }}&nbsp;{{ item.payload.doc.data().credit }}</ion-label>
+       
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>圖 片 鳴 謝 (會員區):</ion-label>
+    </ion-item>
+  
+    <ion-list>
+    
+      <ion-item class=credit>
+      
+        <ion-label>lenmdp from depositphotos</ion-label>
+       
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
 </ion-content>

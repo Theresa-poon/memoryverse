@@ -18,6 +18,7 @@ export class VersePage implements OnInit {
   plainInput = ""
   noBreakInput = ""
   plainVerse = ""
+  display = ""
 
   constructor(
     private route: ActivatedRoute,
@@ -64,7 +65,9 @@ export class VersePage implements OnInit {
       this.location.back();
       //this.router.navigate(['/menu']);
     } else {
-      this.presentAlert('再試試吧 !', '加油 !')
+      this.findDiff(this.noBreakInput, this.plainVerse)
+      this.presentAlert('再試試吧 ! 加油 !', '提示: '+this.display)
+      //this.presentAlert('再試試吧 !', '加油 !')
       this.localstorageService.setlocalOff(this.firebaseService.currentIndex);
     } 
   }
@@ -76,6 +79,41 @@ export class VersePage implements OnInit {
       buttons: ["OK"]
     })
     await alert.present()
+  }
+
+  findDiff(input, verse) {
+    var i
+    this.display = ""
+    for (i = 0; i < verse.length+1; i++) { 
+      if (verse[i] == input[i]) {
+        this.display = this.display.concat(verse[i]);
+        console.log(this.display)
+      } else {
+        if (input[i] == null) {
+          console.log("inputi = null")
+          this.display = this.display.concat(" + ",verse[i],"...")
+          console.log(this.display+i)
+        } else {
+          if (verse[i] == null) {
+            console.log("versei = null")
+            this.display = this.display.concat(" << 經文到此已完結！")
+            console.log(this.display+i)
+          } else {
+            //this.display = this.display.concat(input[i]," (",input[i]," >> ",verse[i],") ...")
+            //console.log(this.display+i)
+            if (i != 0) {
+              this.display = this.display.concat(" >>「",verse[i],"」")
+              console.log(this.display+i)
+              //console.log(this.test)
+              //console.log(input[i+1])
+            } else {
+              this.display = this.display.concat(verse[i],"...")
+            }
+          }
+        }
+        break
+      }
+    }
   }
 
 }

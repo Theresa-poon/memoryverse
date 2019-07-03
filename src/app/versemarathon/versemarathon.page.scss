@@ -1,0 +1,137 @@
+ion-content {
+    --background: #E0FFFF;
+    --padding-top: 0px;
+  }
+
+  .item, .list, .item-content, .item-complex {
+    --ion-background-color: transparent !important;
+  }
+
+  // May need this for ios to add scroll-bar to ion-select?
+  //.action-sheet-group {
+  //  --overflow: auto !important;
+  //}
+  
+  //.alert-radio-group::-webkit-scrollbar {
+  //  width: 1em;
+  //  --display: block !important;
+  //}
+
+  //.alert-radio-group::-webkit-scrollbar-track {
+  //  --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  //}
+
+  //.alert-radio-group::-webkit-scrollbar-thumb {
+  //  background-color: darkgrey;
+  //  outline: 1px solid slategrey;
+  //}
+
+  .marathon-background-color{
+    --background: #FFFFE0;
+    //--background: #FFE4C4; 
+    //--color: #006400;
+    --color: #800000;
+    font-family: DFKai-sb;
+    font-size: 30px;
+    padding: 15px 70px 0px 0px;
+    //padding: 15px 45px 0px 8px;
+    text-align: center;
+    text-shadow: 1px 1px 3px #F4A460;
+    }
+
+    .teamInfo {
+      border-style: solid;
+      border-width: 2px;
+      border-color: #90EE90;
+      //box-shadow: 3px 3px 2px #D3D3D3;
+      margin: 13px 0px 10px 0px;
+      //max-height: 70px;
+    }
+
+    .teamMenu {
+      //background-color: #FFFACD;
+      background-color: #FFFFF0;
+    }
+
+    .columnL {
+      //width: 43%;
+      font-family: DFKai-sb;
+      font-size: 15px;
+      text-align: left;
+      //padding: 10px 0px 0px 0px;
+    }
+
+    .columnC {
+      //width: 43%;
+      font-family: DFKai-sb;
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 1px;
+      //padding: 10px 0px 0px 0px;
+    }
+
+    .columnR {
+      //width: 43%;
+      font-family: DFKai-sb;
+      font-size: 15px;
+      text-align: right;
+      //padding: 10px 0px 0px 0px;
+    }
+    
+    .verseInfo {
+      border-style: solid;
+      border-width: 2px;
+      border-color: #90EE90;
+      //box-shadow: 3px 3px 2px #D3D3D3;
+      margin: 13px 0px 10px 0px;
+      //max-height: 70px;
+    }
+
+    .verseMenu {
+      background-color: #90EE90;
+    }
+
+    .searchLine {
+      font-family: DFKai-sb;
+      font-size: 18px;
+      font-weight: bold;
+      //letter-spacing: 2px;
+      color: #737373;
+    }
+    
+    .option {
+      font-family: DFKai-sb;
+      font-size: 13px;
+      //color: #737373;
+    }
+
+    .floatOne {
+      position: absolute;
+      top:25%;
+      //top: 34.5%;
+      width: 100%;
+      font-family: DFKai-sb;
+      font-size: 16px;
+      //text-shadow: 1px 1px 1px #7B68EE;
+      //font-size: 13px;
+      text-align: center;
+    }
+
+    .memberInfo {
+      //border: 2px solid #DB7093;
+      border: 2px solid #fbcfce;
+      background-color: white;
+      //box-shadow: 3px 3px 2px #D3D3D3;
+      margin: 13px 0px 10px 0px;
+      //max-height: 70px;
+    }
+
+    .memberMenu {
+      background-color: #fcdbba;
+      //background-color: #FAEBD7;
+    }
+
+    .textinput {
+      margin: 5px 15px 8px 15px;
+      background-color: #FFFFF0;
+    }

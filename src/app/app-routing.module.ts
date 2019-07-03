@@ -12,6 +12,10 @@ const routes: Routes = [
   { path: 'reset', loadChildren: './reset/reset.module#ResetPageModule' },
   { path: 'battle', loadChildren: './battle/battle.module#BattlePageModule' },
   { path: 'versebattle', loadChildren: './versebattle/versebattle.module#VersebattlePageModule' },
+  { path: 'marathon', loadChildren: './marathon/marathon.module#MarathonPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'versemarathon', loadChildren: './versemarathon/versemarathon.module#VersemarathonPageModule' },
+  { path: 'rules', loadChildren: './rules/rules.module#RulesPageModule' },
 ];
 
 @NgModule({

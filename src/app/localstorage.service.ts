@@ -6,7 +6,7 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 })
 export class LocalstorageService {
 
-  doneVerses: Array<any>
+  doneVerses: Array<any> // array storing which verses have been successfully memorised
   doneversesString
   doneVerseschild: Array<any>
   doneverseschildString
@@ -16,6 +16,10 @@ export class LocalstorageService {
   battleBoard: Array<any>
   roundCount
   whoWins
+  lastUsername // current logged in username
+  lastPassword // current logged in username
+  lastUserID  // current logged in userID
+  switch // indicator whether user is logged in
 
   constructor() { }
 
@@ -124,6 +128,21 @@ export class LocalstorageService {
       
     
     console.log(this.battleBoard)
+  }
+
+  getLoginStatus() {
+    if(localStorage.getItem("login9012")===null) {
+      this.lastUserID = ""
+      this.lastUsername = ""
+      this.lastPassword = ""
+      //this.lastUserID = "C8o7ZTtZCX0Tpbd9qAZ0"
+      //this.lastUsername = "金句博士"
+      //this.lastPassword = "123456"
+    } else {
+      this.lastUserID = localStorage.getItem("login9012")
+      this.lastUsername = localStorage.getItem("login9014")
+      this.lastPassword = localStorage.getItem("login9016")
+    }
   }
 
 }

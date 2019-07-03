@@ -39,6 +39,11 @@ export class AppComponent {
       icon: 'grid'
     },
     {
+      title: '會 員 區',
+      url: '/marathon',
+      icon: 'rocket'
+    },
+    {
       title: '設 置',
       url: '/reset',
       icon: 'settings'
