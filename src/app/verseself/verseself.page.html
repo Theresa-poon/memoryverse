@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="verse-background-color">
+    <ion-buttons slot="start">
+        <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    頌 經 樂
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+      <ion-card-content class=versedisplay>
+          
+          <ion-img src="https://ucarecdn.com/32d81935-f88b-440a-bcff-5746fc07dc10/-/scale_crop/400x200/center/"></ion-img>
+          
+          <ion-button expand="full" fill="clear" size="small" color="light" strong>
+            <div class=versetext>{{ information.title }}</div>
+          </ion-button>
+          
+          <p class=versetext>「{{ information.value.substr(0,3) }}.............」</p>
+        
+        </ion-card-content>
+  </ion-card>
+
+  <p></p>
+
+  <ion-card>
+    <ion-card-content class=textinput>
+        <ion-textarea rows=3 placeholder="輸入經文 (省略章節及標點符號) - 可使用語音輸入" [(ngModel)]="trialInput"></ion-textarea>
+        <ion-button shape="round" color="danger" size="small" (click)="checkInput()" slot="end">
+          <div>檢視輸入</div>
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

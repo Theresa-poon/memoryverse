@@ -16,6 +16,8 @@ import { AngularFireModule } from '@angular/fire'; // import Firebase
 import { AngularFirestoreModule } from '@angular/fire/firestore'; //import firestore
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 
 const config = {
   apiKey: "AIzaSyBwZrJj5Eqp9TtFachASp90k1rq2wVqh0A",
@@ -35,6 +37,7 @@ const config = {
     //AngularFireModule.initializeApp(firebaseConfig), // new
     AngularFireModule.initializeApp(config), // new
     AngularFirestoreModule,  // new
+    IonicStorageModule.forRoot(), //new
   ],
   providers: [
     StatusBar,

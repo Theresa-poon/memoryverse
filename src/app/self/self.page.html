@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar class="new-background-choose">
+    <ion-icon name="color-wand" slot="start"></ion-icon>
+    <ion-button slot="end" fill="clear">
+      <ion-menu-button class="sidemenubutton"></ion-menu-button>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;自 選 篇
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="fixed" class="labelStyleA">經文章節:</ion-label>
+    <ion-input [(ngModel)]="newItem.title" maxlength=30 placeholder="(例: 創世紀 1章1-3節)" class="labelStyleD"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed" class="labelStyleB">經文內容:</ion-label>
+    <ion-textarea [(ngModel)]="newItem.value" row=3 maxlength=163 placeholder="(字數上限為150字)" class="labelStyleC"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" (click)="addItem()">添加以上經文</ion-button>
+
+  <ion-list #mylist class="listpadding">
+
+    <ion-item-sliding *ngFor="let item of items; index as i">
+
+      <ion-item (click)="chooseItem(item, i, 'self')">
+        <ion-label class="notyetchoose" text-wrap>
+
+          <ion-button expand="full" fill="clear" size="small" color="light" strong>
+            <div slot="end">
+              <ion-icon name="star" class=doneiconB slot="end" *ngIf="item.modified > 0 && item.title.length <= 13"></ion-icon>
+              <ion-icon name="star" class=doneiconB slot="end" *ngIf="item.modified > 1 && item.title.length <= 13"></ion-icon>
+              <ion-icon name="star" class=doneiconB slot="end" *ngIf="item.modified > 2 && item.title.length <= 13"></ion-icon>
+              <ion-icon name="star" class=doneiconC slot="end" *ngIf="item.modified > 0 && item.title.length > 13"></ion-icon>
+              <ion-icon name="star" class=doneiconC slot="end" *ngIf="item.modified > 1 && item.title.length > 13"></ion-icon>
+              <ion-icon name="star" class=doneiconC slot="end" *ngIf="item.modified > 2 && item.title.length > 13"></ion-icon>
+            </div>
+            <div class="notyettextchooseA" *ngIf="item.title.length <= 13">{{ item.title }} &nbsp;</div>
+            <div class="notyettextchooseD" *ngIf="item.title.length > 13">{{ item.title }} &nbsp;</div>
+          </ion-button>
+
+          <ion-text class="notyettextchooseB">
+            <p>{{ item.value }}</p>
+          </ion-text>
+          <p class="notyettextchooseC">(已成功背誦{{ item.modified }}次)</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteItem(item)">刪除經文</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

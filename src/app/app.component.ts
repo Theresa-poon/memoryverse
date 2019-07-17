@@ -34,6 +34,11 @@ export class AppComponent {
       icon: 'bonfire'
     },
     {
+      title: '自 選 金 句 庫',
+      url: '/self',
+      icon: 'color-wand'
+    },
+    {
       title: '金 句 對 戰 區',
       url: '/battle',
       icon: 'grid'

@@ -16,6 +16,8 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'versemarathon', loadChildren: './versemarathon/versemarathon.module#VersemarathonPageModule' },
   { path: 'rules', loadChildren: './rules/rules.module#RulesPageModule' },
+  { path: 'self', loadChildren: './self/self.module#SelfPageModule' },
+  { path: 'verseself', loadChildren: './verseself/verseself.module#VerseselfPageModule' },
 ];
 
 @NgModule({
