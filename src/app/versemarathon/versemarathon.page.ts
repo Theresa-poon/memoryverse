@@ -201,15 +201,15 @@ export class VersemarathonPage implements OnInit {
   }
 
   compareVerse() {
-    this.plainInput = this.trialInput.replace(/[，。、:;；,." "！!？?]/g,"")
+    this.plainInput = this.trialInput.replace(/[，。、:;；,." "！!？?─]/g,"")
     this.noBreakInput = this.plainInput.replace(/\n/g, "")
     
     this.plainVerse = 
-      this.vsDataArray[2].replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.vsDataArray[3].replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.vsDataArray[4].replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.vsDataArray[5].replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.vsDataArray[6].replace(/[，。、:;；,." "！!？?]/g,"") 
+      this.vsDataArray[2].replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.vsDataArray[3].replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.vsDataArray[4].replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.vsDataArray[5].replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.vsDataArray[6].replace(/[，。、:;；,." "！!？?─]/g,"") 
 
     console.log(this.plainVerse)
     console.log(this.noBreakInput)

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar class="new-background-child">
+    <ion-icon name="contacts" slot="start"></ion-icon>
+    <ion-button slot="end" fill="clear">
+      <ion-menu-button class="sidemenuchild"></ion-menu-button>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;AWANA 
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-searchbar [(ngModel)]="searchVerse" (ionChange)="searchChanged()" placeholder="輸入經卷 (例: 羅馬書)"></ion-searchbar>
+
+    <ion-card>
+    <ion-item class=searchunit>
+      <ion-label class=searchlabel>選 擇 單 元:</ion-label>
+      <ion-select class=searchoption [(ngModel)]="unit" (ionChange)="searchChanged()">
+        <ion-select-option value="">全部單元</ion-select-option>
+        <ion-select-option value="TT2Zero">T&T2 啟航區</ion-select-option>
+        <ion-select-option value="TT2One">T&T2 1:1-7</ion-select-option>
+        <ion-select-option value="TT2Two">T&T2 2:1-7</ion-select-option>
+        <ion-select-option value="TT2Three">T&T2 3:1-7</ion-select-option>
+        <ion-select-option value="TT2Four">T&T2 4:1-7</ion-select-option>
+        <ion-select-option value="TT2Five">T&T2 5:1-7</ion-select-option>
+        <ion-select-option value="TT2Six">T&T2 6:1-7</ion-select-option>
+        <ion-select-option value="TT2Seven">T&T2 7:1-7</ion-select-option>
+        <ion-select-option value="TT2Eight">T&T2 8:1-7</ion-select-option>
+      </ion-select>
+    </ion-item>
+    </ion-card>
+    
+    <ion-card button *ngFor="let item of verses" (click)="GoToVerseAwana(item, 'awana')">
+
+      <ion-card-content class=notyetchild>
+
+        <ion-button expand="full" fill="clear" size="small" color="light" strong>
+          <div slot="end">
+            <ion-icon name="star" class=doneiconteentwo slot="end" *ngIf="this.localstorageService.doneVersesawana[item.index-1] >= '1' && this.localstorageService.doneVersesawana[item.index-1] <= '3'"></ion-icon>
+            <ion-icon name="trophy" class="animated tada delay-3s" *ngIf="this.localstorageService.doneVersesawana[item.index-1] >= '4'" style="color: #FFA500; font-size: 22px; transform: rotate(+20deg); text-shadow: 1px 1px 1px orange;"></ion-icon>
+            <ion-icon name="star" class=doneiconteentwo slot="end" *ngIf="this.localstorageService.doneVersesawana[item.index-1] >= '2' && this.localstorageService.doneVersesawana[item.index-1] <= '4'"></ion-icon>
+            <ion-icon name="trophy" class="animated tada delay-4s" *ngIf="this.localstorageService.doneVersesawana[item.index-1] >= '5'" style="color: #1E90FF; font-size: 22px; transform: rotate(+20deg); text-shadow: 1px 1px 1px orange;"></ion-icon>
+            <ion-icon name="star" class=doneiconteentwo slot="end" *ngIf="this.localstorageService.doneVersesawana[item.index-1] >= '3' && this.localstorageService.doneVersesawana[item.index-1] <= '5'"></ion-icon>
+            <ion-icon name="trophy" class="animated tada delay-5s" *ngIf="this.localstorageService.doneVersesawana[item.index-1] >= '6'" style="color: #FF00FF; font-size: 22px; transform: rotate(+20deg); text-shadow: 1px 1px 1px orange;"></ion-icon>
+          </div>
+          <div class=notyettextchild>{{ item.verse }}&nbsp;</div>
+        </ion-button>
+        <p class=notyettextchild>{{ item.text1 }}</p>
+        <p class=notyettextchild *ngIf="item.text2 != null">{{ item.text2 }}</p>
+        <p class=notyettextchild *ngIf="item.text3 != null">{{ item.text3 }}</p>
+        <p class=notyettextchild *ngIf="item.text4 != null">{{ item.text4 }}</p>
+        <p class=notyettextchild *ngIf="item.text5 != null">{{ item.text5 }}</p>
+        <p class=notyettextchild *ngIf="item.text6 != null">{{ item.text6 }}</p>
+        <p class=notyettextchild *ngIf="item.text7 != null">{{ item.text7 }}</p>
+        <p class=notyettextchild *ngIf="item.text8 != null">{{ item.text8 }}</p>
+        <p class=notyettextchild *ngIf="item.text9 != null">{{ item.text9 }}</p>
+        <ion-icon *ngIf="item.unit == ''" name="videocam"></ion-icon>
+        <ion-icon *ngIf="item.unit == ''" name="document"></ion-icon>
+    
+      </ion-card-content>
+
+    </ion-card>
+
+</ion-content>

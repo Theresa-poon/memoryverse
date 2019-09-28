@@ -16,7 +16,8 @@ import { AngularFireModule } from '@angular/fire'; // import Firebase
 import { AngularFirestoreModule } from '@angular/fire/firestore'; //import firestore
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
-import { IonicStorageModule } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage'; // store data for self page
+import{ HttpClientModule } from '@angular/common/http'; // get json data in AWANA page
 
 
 const config = {
@@ -38,6 +39,7 @@ const config = {
     AngularFireModule.initializeApp(config), // new
     AngularFirestoreModule,  // new
     IonicStorageModule.forRoot(), //new
+    HttpClientModule // new
   ],
   providers: [
     StatusBar,

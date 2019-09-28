@@ -34,6 +34,11 @@ export class AppComponent {
       icon: 'bonfire'
     },
     {
+      title: 'AWANA',
+      url: '/awana',
+      icon: 'contacts'
+    },
+    {
       title: '自 選 金 句 庫',
       url: '/self',
       icon: 'color-wand'

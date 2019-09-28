@@ -34,12 +34,12 @@ export class VerseselfPage implements OnInit {
 
   checkInput() {
     //console.log(this.trialInput)
-    this.plainInput = this.trialInput.replace(/[，。、:;；,.．：" "！!？?「」“”（）()‘’]/g,"")
+    this.plainInput = this.trialInput.replace(/[，。、:;；,.．：" "！!？?「」“”（）()‘’─]/g,"")
     this.noBreakInput = this.plainInput.replace(/\n/g, "")
     //console.log(this.plainInput)
     
     this.noBreakVerse = this.information.value.replace(/\n/g, "")
-    this.plainVerse = this.noBreakVerse.replace(/[，。、:;；,.．：" "！!？?「」“”（）()‘’]/g,"")
+    this.plainVerse = this.noBreakVerse.replace(/[，。、:;；,.．：" "！!？?「」“”（）()‘’─]/g,"")
     
     console.log(this.plainVerse)
     console.log(this.noBreakInput)

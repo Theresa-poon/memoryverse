@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: 'rules', loadChildren: './rules/rules.module#RulesPageModule' },
   { path: 'self', loadChildren: './self/self.module#SelfPageModule' },
   { path: 'verseself', loadChildren: './verseself/verseself.module#VerseselfPageModule' },
+  { path: 'awana', loadChildren: './awana/awana.module#AwanaPageModule' },
+  { path: 'verseawana', loadChildren: './verseawana/verseawana.module#VerseawanaPageModule' },
 ];
 
 @NgModule({

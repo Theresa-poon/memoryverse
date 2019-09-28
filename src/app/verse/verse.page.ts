@@ -35,21 +35,21 @@ export class VersePage implements OnInit {
 
   checkInput() {
     //console.log(this.trialInput)
-    this.plainInput = this.trialInput.replace(/[，。、:;；,." "！!？?]/g,"")
+    this.plainInput = this.trialInput.replace(/[，。、:;；,." "！!？?─]/g,"")
     this.noBreakInput = this.plainInput.replace(/\n/g, "")
     //console.log(this.plainInput)
     console.log(this.localstorageService.currentPage)
     if (this.localstorageService.currentPage == "teen") {
       this.plainVerse = 
-      this.information.payload.doc.data().sentence1.replace(/[，。、:;；,." "！!？?]/g,"") + 
-      this.information.payload.doc.data().sentence2.replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.information.payload.doc.data().sentence3.replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.information.payload.doc.data().sentence4.replace(/[，。、:;；,." "！!？?]/g,"")
+      this.information.payload.doc.data().sentence1.replace(/[，。、:;；,." "！!？?─]/g,"") + 
+      this.information.payload.doc.data().sentence2.replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.information.payload.doc.data().sentence3.replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.information.payload.doc.data().sentence4.replace(/[，。、:;；,." "！!？?─]/g,"")
     } else {
       this.plainVerse = 
-      this.information.payload.doc.data().sentence1.replace(/[，。、:;；,." "！!？?]/g,"") + 
-      this.information.payload.doc.data().sentence2.replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.information.payload.doc.data().sentence3.replace(/[，。、:;；,." "！!？?]/g,"")
+      this.information.payload.doc.data().sentence1.replace(/[，。、:;；,." "！!？?─]/g,"") + 
+      this.information.payload.doc.data().sentence2.replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.information.payload.doc.data().sentence3.replace(/[，。、:;；,." "！!？?─]/g,"")
     }
     console.log(this.plainVerse)
     console.log(this.noBreakInput)

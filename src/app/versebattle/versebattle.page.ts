@@ -32,13 +32,13 @@ export class VersebattlePage implements OnInit {
   }
 
   checkInput() {
-    this.plainInput = this.trialInput.replace(/[，。、:;；,." "！!？?]/g,"")
+    this.plainInput = this.trialInput.replace(/[，。、:;；,." "！!？?─]/g,"")
     this.noBreakInput = this.plainInput.replace(/\n/g, "")
     
     this.plainVerse = 
-      this.information.payload.doc.data().sentence1.replace(/[，。、:;；,." "！!？?]/g,"") + 
-      this.information.payload.doc.data().sentence2.replace(/[，。、:;；,." "！!？?]/g,"") +
-      this.information.payload.doc.data().sentence3.replace(/[，。、:;；,." "！!？?]/g,"")
+      this.information.payload.doc.data().sentence1.replace(/[，。、:;；,." "！!？?─]/g,"") + 
+      this.information.payload.doc.data().sentence2.replace(/[，。、:;；,." "！!？?─]/g,"") +
+      this.information.payload.doc.data().sentence3.replace(/[，。、:;；,." "！!？?─]/g,"")
     
     console.log(this.plainVerse)
     console.log(this.noBreakInput)

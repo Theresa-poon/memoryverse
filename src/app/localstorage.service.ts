@@ -1,5 +1,20 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IAwana } from './awana';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+
+export enum SearchType {
+  all = '',
+  TT2Zero = 'TT2Zero',
+  TT2One = 'TT2One',
+  TT2Two = 'TT2Two',
+  TT2Three = 'TT2Three',
+  TT2Four = 'TT2Four',
+  TT2Five = 'TT2Five',
+  TT2Six = 'TT2Six',
+  TT2Seven = 'TT2Seven',
+  TT2Eight = 'TT2Eight'
+}
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +27,8 @@ export class LocalstorageService {
   doneverseschildString
   doneVersesteen: Array<any>
   doneversesteenString
+  doneVersesawana: Array<any>
+  doneversesawanaString
   currentPage
   battleBoard: Array<any>
   roundCount
@@ -20,8 +37,10 @@ export class LocalstorageService {
   lastPassword // current logged in username
   lastUserID  // current logged in userID
   switch // indicator whether user is logged in
+  private _url: string ="/assets/data/awana.json"; // json storing awana verses 
+  currentVerse: any; // storing awana selected verse
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getLocal() {
     if(localStorage.getItem("doneVerses3078")===null) 
@@ -51,6 +70,23 @@ export class LocalstorageService {
     this.doneVersesteen = localStorage.getItem("doneVerses3478").split(",")
     console.log(this.doneVersesteen)
     this.currentPage="teen"
+  }
+
+  getLocalAwana(length) {
+    if(localStorage.getItem("doneVerses3778")===null) 
+    {
+      var temp = "0"
+      var x 
+      for (x = 1; x < length; x++) {
+        temp = temp + ",0"
+      }
+      console.log("temp = "+temp)
+      //localStorage.setItem("doneVerses3778", "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0")
+      localStorage.setItem("doneVerses3778", temp)
+    }
+    this.doneVersesawana = localStorage.getItem("doneVerses3778").split(",")
+    console.log(this.doneVersesawana)
+    this.currentPage="awana"
   }
 
   getBattle() {
@@ -94,6 +130,12 @@ export class LocalstorageService {
       var y = this.doneVersesteen[index]
       console.log(y)
       //console.log(this.doneversesteenString)
+    }
+    if(this.currentPage == "awana") {
+      this.doneVersesawana[index-1] = Math.min(parseInt(this.doneVersesawana[index-1]) + 1, 6)
+      this.doneversesawanaString = this.doneVersesawana.toString()
+      localStorage.setItem("doneVerses3778", this.doneversesawanaString)
+      console.log(this.doneversesawanaString)
     }
   }
 
@@ -143,6 +185,10 @@ export class LocalstorageService {
       this.lastUsername = localStorage.getItem("login9014")
       this.lastPassword = localStorage.getItem("login9016")
     }
+  }
+
+  searchData() {
+    return this.http.get<IAwana[]>(this._url);
   }
 
 }
