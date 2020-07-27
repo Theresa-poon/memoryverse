@@ -6,6 +6,7 @@
 * 成功背誦1-3次, 可為經文解鎖精美配圖, 和獲得獎勵星星
 * 「過三關」遊戲, 鼓勵學生一次過熟讀十句金句, 互相挑戰, 增加趣味性
 * 「會員區」提供團體賽形式, 方便主日學老師進行班制比賽
+
 ###### 如需要協助,請聯絡 peterangela9795@yahoo.com.hk
 
 # Other apps by Theresa Poon
@@ -23,9 +24,12 @@
 
 ###### "StarWordsDSE" ("us", "we", or "our") operates the "StarWordsDSE" mobile application (hereinafter referred to as the "Service").
 
-###### This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices ###### you have associated with that data. Our Privacy Policy for "StarWordsDSE" is created with the help of the PrivacyPolicies.com Privacy Policy ###### Generator.
+###### This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the 
+###### choices you have associated with that data. Our Privacy Policy for "StarWordsDSE" is created with the help of the PrivacyPolicies.com Privacy ###### Policy Generator.
 
-###### We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance ###### with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our ###### Terms and Conditions.
+###### We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in 
+###### accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same 
+###### meanings as in our Terms and Conditions.
 
 #### Information Collection And Use
 ###### We collect several different types of information for various purposes to provide and improve our Service to you.
@@ -33,8 +37,8 @@
 ##### Types of Data Collected
 
 ###### Personal Data
-###### While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or 
-###### identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
+###### While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact 
+###### or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
 
 ###### (1)Cookies and Usage Data
 
