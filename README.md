@@ -53,9 +53,12 @@
 
 ###### We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.
 
-###### Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website ###### and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and ###### analyze our Service.
+###### Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a 
+###### website a nd stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information 
+###### and to improve and analyze our Service.
 
-###### You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you ###### may not be able to use some portions of our Service. You can learn more how to manage cookies in the Browser Cookies Guide.
+###### You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, 
+###### you may not be able to use some portions of our Service. You can learn more how to manage cookies in the Browser Cookies Guide.
 
 ###### Examples of Cookies we use:
 
@@ -77,13 +80,17 @@
 
 #### Transfer Of Data
 
-###### Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, ###### country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
+###### Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, 
+###### province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
 
-###### If you are located outside Hong Kong and choose to provide information to us, please note that we transfer the data, including Personal Data, ###### to Hong Kong and process it there.
+###### If you are located outside Hong Kong and choose to provide information to us, please note that we transfer the data, including 
+###### Personal Data, to Hong Kong and process it there.
 
 ###### Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
 
-###### "StarWordsDSE" will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy ###### Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place ###### including the security of your data and other personal information.
+###### "StarWordsDSE" will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this 
+###### Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate 
+###### controls in place including the security of your data and other personal information.
 
 #### Disclosure Of Data
 
@@ -99,14 +106,17 @@
 
 #### Security Of Data
 
-###### The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage ###### is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute 
-###### security.
+###### The security of your data is important to us, but remember that no method of transmission over the Internet, or method of 
+###### electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot 
+###### guarantee its absolute security.
 
 #### Service Providers
 
-###### We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to ###### perform Service-related services or to assist us in analyzing how our Service is used.
+###### We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our 
+###### behalf, to perform Service-related services or to assist us in analyzing how our Service is used.
 
-###### These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it ###### for any other purpose.
+###### These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose 
+###### or use it for any other purpose.
 
 #### Links To Other Sites
 
