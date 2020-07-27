@@ -25,7 +25,8 @@
 ###### "StarWordsDSE" ("us", "we", or "our") operates the "StarWordsDSE" mobile application (hereinafter referred to as the "Service").
 
 ###### This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the 
-###### choices you have associated with that data. Our Privacy Policy for "StarWordsDSE" is created with the help of the PrivacyPolicies.com Privacy ###### Policy Generator.
+###### choices you have associated with that data. Our Privacy Policy for "StarWordsDSE" is created with the help of the PrivacyPolicies.com 
+###### Privacy Policy Generator.
 
 ###### We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in 
 ###### accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same 
@@ -44,7 +45,9 @@
 
 ###### Usage Data
 
-###### When you access the Service with a mobile device, we may collect certain information automatically, including, but not limited to, the type ###### of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of ###### mobile Internet browser you use, unique device identifiers and other diagnostic data ("Usage Data").
+###### When you access the Service with a mobile device, we may collect certain information automatically, including, but not limited to, 
+###### the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, 
+###### the type of mobile Internet browser you use, unique device identifiers and other diagnostic data ("Usage Data").
 
 ###### Tracking & Cookies Data
 
